@@ -49,6 +49,25 @@ div#btnsArea {
     width: calc(2*var(--bokkw-ski));
     height: 20%;
     background-color: green;
+    text-align: center;
 }
+
+div#bNazad, div#bWpieriod {
+    display: inline-block;
+    height: 80%;
+    width: 30%;
+    border: 2px solid black;
+
+    /* margin:30px; */
+}
+
+
+div#bNazad {
+    margin-right: 50px;
+}
+/* 
+div#btnWpieriod {
+    margin-right: 50px;
+} */
 
 
