@@ -7,14 +7,13 @@
 
 
 :root {
---bokkw-ski: 60vw;
-/* --bokkw-ski: 45vh; */
+--bokkw-ski: 55vh;
 /* bok kwadratu na obrazek */
 }
 
 body {
     background-color: #fef3dd;
-    border: 1px solid maroon;
+    /* border: 1px solid maroon; */
 }
 
 #content {
@@ -29,11 +28,9 @@ body {
 
 
 div#pctArea {
-
     width: var(--bokkw-ski);
     height: var(--bokkw-ski);
-
-    margin-left: auto;
+    margin-left:  auto;
     margin-right: auto;
     /* obrazek: */
     background-repeat: no-repeat;
@@ -44,3 +41,14 @@ div#pctArea {
     transition: .2s;
     border: 1px solid black;
 }
+
+div#btnsArea {
+    margin-top:2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(2*var(--bokkw-ski));
+    height: 20%;
+    background-color: green;
+}
+
+
