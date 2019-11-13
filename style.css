@@ -7,9 +7,10 @@
 :root {
     --content-width-ski: 70vw;
     --content-height-ski: 95vh;
-    --btnsArea-height-ski: calc(0.1 * var(--content-height-ski));
-    /* bok kwadratu na obrazek */
+    /* bok kwadratu na obrazek: */
     --pctAreaSide-ski: calc(0.5 * var(--content-width-ski));
+    /* --btnsArea-height-ski: calc(0.1 * var(--content-height-ski)); */
+    --btnsArea-height-ski: calc(0.25*var(--pctAreaSide-ski));
 }
 
 body {
@@ -72,18 +73,22 @@ div#btnsArea p {
 }
 
 @media (max-width:1024px) {
-
-
     :root {
         --content-width-ski: 80vw;
-        --content-height-ski: 95vh;
-        --btnsArea-height-ski: calc(0.07 * var(--content-height-ski));
+        --content-height-ski: 65vh;
         /* bok kwadratu na obrazek */
         --pctAreaSide-ski: calc(0.7 * var(--content-width-ski));
     }
-
-
     div#btnsArea p {
         font-size: 200%;
+    }
+}
+
+@media (max-width:880px) and (orientation: landscape) {
+    :root {
+        --content-width-ski: 80vw;
+        --content-height-ski: 95vh;
+        /* bok kwadratu na obrazek */
+        --pctAreaSide-ski: calc(0.7 * var(--content-height-ski));
     }
 }
