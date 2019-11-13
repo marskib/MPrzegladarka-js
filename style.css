@@ -75,7 +75,7 @@ div#btnsArea p {
 
 
     :root {
-        --content-width-ski: 70vw;
+        --content-width-ski: 80vw;
         --content-height-ski: 95vh;
         --btnsArea-height-ski: calc(0.07 * var(--content-height-ski));
         /* bok kwadratu na obrazek */
