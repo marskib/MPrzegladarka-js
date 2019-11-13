@@ -59,6 +59,7 @@ div#bNazad, div#bWpieriod {
     display: inline-block;
     height: inherit;
     width: 35%;
+    cursor: pointer;
     text-align: center;
     border: 2px solid black;
 }
