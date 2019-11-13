@@ -8,6 +8,7 @@
 
 :root {
 --bokkw-ski: 55vh;
+--btnsArea-height-ski: 100px;
 /* bok kwadratu na obrazek */
 }
 
@@ -43,31 +44,30 @@ div#pctArea {
 }
 
 div#btnsArea {
-    margin-top:2%;
+    margin-top:4%;
     margin-left: auto;
     margin-right: auto;
-    width: calc(2*var(--bokkw-ski));
-    height: 20%;
-    background-color: green;
     text-align: center;
+    width: calc(1.5*var(--bokkw-ski));
+    height: var(--btnsArea-height-ski);
+    /* background-color: green; */
+    border: 1px dotted black;;
 }
 
 div#bNazad, div#bWpieriod {
     display: inline-block;
-    height: 80%;
-    width: 30%;
+    height: inherit;
+    width: 35%;
+    text-align: center;
     border: 2px solid black;
-
-    /* margin:30px; */
 }
-
 
 div#bNazad {
-    margin-right: 50px;
+    margin-right: 150px;
 }
-/* 
-div#btnWpieriod {
-    margin-right: 50px;
-} */
 
 
+div#btnsArea p {
+    font-size: 300%;
+    line-height: var(--btnsArea-height-ski);
+} 
