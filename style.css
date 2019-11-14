@@ -56,8 +56,7 @@ div#btnsArea {
     /* border: 1px dotted black; */
 }
 
-div#bNazad,
-div#bWpieriod {
+div#bNazad, div#bWpieriod {
     display: inline-block;
     height: inherit;
     width: 35%;
@@ -86,6 +85,26 @@ div#homepage a {
     color: gray;
 }
 
+div#bLewy, div#bPrawy {
+    visibility: hidden;;
+    position:absolute;
+    display: inline-block;
+    width:18%;
+    height:75%;
+    top: 5%;
+    background-color: red;
+    border: 1px solid black;;
+}
+
+div#bLewy {
+    left:1%;
+}
+
+div#bPrawy {
+    right:1%;
+}
+
+
 @media (max-width:1024px) {
     :root {
         --content-width-ski: 80vw;
@@ -93,20 +112,28 @@ div#homepage a {
         /* bok kwadratu na obrazek */
         --pctAreaSide-ski: calc(0.7 * var(--content-width-ski));
     }
-
     div#btnsArea p {
         font-size: 200%;
     }
-
     div#homepage {
         font-size: 1.5em;
     }
+}
 
-    @media (max-width:880px) and (orientation: landscape) {
-        :root {
-            --content-width-ski: 80vw;
-            --content-height-ski: 85vh;
-            /* bok kwadratu na obrazek */
-            --pctAreaSide-ski: calc(0.7 * var(--content-height-ski));
-        }
+@media (max-width:880px) and (orientation: landscape) {
+    :root {
+        --content-width-ski: 60vw;
+        --content-height-ski: 85vh;
+        /* bok kwadratu na obrazek */
+        --pctAreaSide-ski: calc(0.9 * var(--content-height-ski));
     }
+
+    div#btnsArea {
+        display:none;
+    }
+
+    div#bLewy, div#bPrawy {
+        visibility: visible;
+    }
+
+}
