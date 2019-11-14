@@ -14,18 +14,19 @@
 }
 
 body {
-    background-color: #fef3dd;
     /* border: 1px solid maroon; */
+    background-color: #ccc;
 }
 
 #content {
-    background-color: #ccc;
+    background-color: #fef3dd;
     width: var(--content-width-ski);
     height: var(--content-height-ski);
     margin-top: 2%;
     padding-top: 2%;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid maroon;
 }
 
 div#pctArea {
@@ -40,7 +41,7 @@ div#pctArea {
     /*cover - ladny kwadrat, ale przycina...*/
     /* obrazek - koniec */
     transition: .2s;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 div#btnsArea {
@@ -51,11 +52,11 @@ div#btnsArea {
     width: var(--content-width-ski);
     height: var(--btnsArea-height-ski);
     /* background-color: green; */
-    border: 1px dotted black;
-    ;
+    /* border: 1px dotted black; */
 }
 
-div#bNazad, div#bWpieriod {
+div#bNazad,
+div#bWpieriod {
     display: inline-block;
     height: inherit;
     width: 35%;
@@ -73,6 +74,17 @@ div#btnsArea p {
     line-height: var(--btnsArea-height-ski);
 }
 
+div#homepage {
+    position: absolute;
+    font-size: 2.5em;
+    left: 7px;
+    bottom: 10px;
+}
+
+div#homepage a {
+    color: gray;
+}
+
 @media (max-width:1024px) {
     :root {
         --content-width-ski: 80vw;
@@ -80,16 +92,20 @@ div#btnsArea p {
         /* bok kwadratu na obrazek */
         --pctAreaSide-ski: calc(0.7 * var(--content-width-ski));
     }
+
     div#btnsArea p {
         font-size: 200%;
     }
-}
 
-@media (max-width:880px) and (orientation: landscape) {
-    :root {
-        --content-width-ski: 80vw;
-        --content-height-ski: 95vh;
-        /* bok kwadratu na obrazek */
-        --pctAreaSide-ski: calc(0.7 * var(--content-height-ski));
+    div#homepage {
+        font-size: 1.5em;
     }
-}
+
+    @media (max-width:880px) and (orientation: landscape) {
+        :root {
+            --content-width-ski: 80vw;
+            --content-height-ski: 95vh;
+            /* bok kwadratu na obrazek */
+            --pctAreaSide-ski: calc(0.7 * var(--content-height-ski));
+        }
+    }

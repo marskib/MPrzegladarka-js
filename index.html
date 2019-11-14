@@ -8,15 +8,30 @@
     <title>MPrzeglądarka</title>
     <link rel="stylesheet" href="style.css">
 
+
+    <!-- przyklad font awesome:-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+
+
 </head>
 
 <body>
     <div id="content">
         <div id="pctArea"></div>
         <div id="btnsArea">
-            <div id="bNazad"    onclick="dajPrevPicture()"><p>&#10229;</p></div>
-            <div id="bWpieriod" onclick="dajNextPicture()"><p>&#10230;</p></div>
+            <div id="bNazad" onclick="dajPrevPicture()">
+                <p>&#10229;</p>
+            </div>
+            <div id="bWpieriod" onclick="dajNextPicture()">
+                <p>&#10230;</p>
+            </div>
         </div>
+    </div>
+
+    <div id="homepage">
+        <a href="https://autyzmsoft.pl" title="strona główna" aria-current="page"><i class="fas fa-home"></i></a>
     </div>
 
     <script src="mprzegladarka.js"></script>

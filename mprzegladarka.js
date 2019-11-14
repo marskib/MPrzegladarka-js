@@ -10,7 +10,7 @@ let CURR_NROBR = null; //numer pokazywanego obrazka
 let pctArea = null; //miejsce na planszy (div) na obrazek
 let bWpieriod = null; //klawisz bWpieriod
 let bNazad = null; //klawisz bNazad
-const PCT_DELAY = 1000; //opoznienie w pokazywaniu obrazka
+const PCT_DELAY = 1200; //opoznienie w pokazywaniu obrazka
 
 //-----------------------------------------------------//
 window.onload = Inicjacja; //--------------------------//
@@ -44,7 +44,8 @@ function ustawObrazek() {
     setTimeout(() => (pctArea.style.backgroundImage = "url(zasoby/" + pctName + ".webp)"), PCT_DELAY);
     //jednorazowy listener i pointer na obrazku:
     setTimeout(() => (pctArea.style.cursor = "pointer"), 2 * PCT_DELAY);
-    pctArea.onclick = function () { odegrajPlik(pctName + ".ogg", PCT_DELAY); pctArea.onclick = null; pctArea.style.cursor = "auto"; }
+    pctArea.onclick = function () { odegrajPlik(pctName + ".ogg", 0); pctArea.onclick = null; pctArea.style.cursor = "auto"; }
+    //
     odegrajPlik(pctName + ".ogg", PCT_DELAY);
 }
 
