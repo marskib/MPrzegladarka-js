@@ -51,6 +51,7 @@ div#btnsArea {
     text-align: center;
     width: var(--content-width-ski);
     height: var(--btnsArea-height-ski);
+    visibility: hidden;
     /* background-color: green; */
     /* border: 1px dotted black; */
 }
@@ -104,7 +105,7 @@ div#homepage a {
     @media (max-width:880px) and (orientation: landscape) {
         :root {
             --content-width-ski: 80vw;
-            --content-height-ski: 95vh;
+            --content-height-ski: 85vh;
             /* bok kwadratu na obrazek */
             --pctAreaSide-ski: calc(0.7 * var(--content-height-ski));
         }
