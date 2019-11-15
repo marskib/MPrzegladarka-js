@@ -129,10 +129,12 @@ div#bLewy p, div#bPrawy p {
     div#btnsArea {
         height: calc(2.0*var(--btnsArea-height-ski));
     }
-    div#btnsArea p {
+
+     div#bNazad p, div#bWpieriod p {
         font-size: 200%;
-        line-height: 400%;
     }
+
+
     div#homepage {
         font-size: 1.8em;
     }
@@ -152,6 +154,6 @@ div#bLewy p, div#bPrawy p {
         visibility: visible;
     }
     div#homepage {
-        bottom: 20px;
+        bottom: 15px;
     }
 }
