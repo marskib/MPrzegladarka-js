@@ -10,6 +10,8 @@ let CURR_NROBR = null; //numer pokazywanego obrazka
 let pctArea = null;    //miejsce na planszy (div) na obrazek
 let bWpieriod = null;  //klawisz bWpieriod
 let bNazad = null;     //klawisz bNazad
+let bLewy  = null;     //j.w. analogicznie
+let bPrawy = null;     //j.w. analogicznie
 const PCT_DELAY = 1000; //opoznienie w pokazywaniu obrazka
 
 //-----------------------------------------------------//
@@ -24,6 +26,8 @@ function Inicjacja() {
     pctArea = document.getElementById("pctArea");   //uchwyt do obrazka
     bWpieriod = document.getElementById("bWpieriod"); //uchwyt do klawisza bWpieriod
     bNazad = document.getElementById("bNazad");    //uchwyt do klawisza bNazad
+    bLewy  = document.getElementById("bLewy");     //j.w. analogicznie
+    bPrawy = document.getElementById("bPrawy");    //j.w. analogicznie
     //
     CURR_NROBR = getRandomIntInclusive(0, obrazki.length - 1);
     ustawObrazek();
@@ -57,13 +61,44 @@ function ustawObrazek() {
 function dajNextPicture() {
     CURR_NROBR++;
     if (CURR_NROBR===obrazki.length) CURR_NROBR = 0;
+    blokujKlawiszeNaChwile(3*PCT_DELAY);
     ustawObrazek();
 }
 
 function dajPrevPicture() {
     CURR_NROBR--;
     if (CURR_NROBR===-1) CURR_NROBR = obrazki.length-1;
+    blokujKlawiszeNaChwile(3*PCT_DELAY);
     ustawObrazek();
+}
+
+function blokujKlawiszeNaChwile(chwila) {
+    //---------------------------------------
+    //zabezpieczenie przed bezmyslnym klikaniem
+    //---------------------------------------
+    bWpieriod.onclick = null;
+    bNazad.onclick    = null;
+    bPrawy.onclick = null;
+    bLewy.onclick  = null;
+    //
+    bWpieriod.style.cursor = "default";
+    bNazad.style.cursor    = "default";
+    bPrawy.style.cursor = "default";
+    bLewy.style.cursor  = "default";
+    //
+    setTimeout(przywrocHandlery, chwila);
+}
+
+let przywrocHandlery = function() {
+    bWpieriod.style.cursor = "pointer";
+    bNazad.style.cursor    = "pointer";
+    bPrawy.style.cursor = "pointer";
+    bLewy.style.cursor  = "pointer";
+    //    
+    bWpieriod.onclick = dajNextPicture;
+    bNazad.onclick    = dajPrevPicture;
+    bPrawy.onclick = dajNextPicture;
+    bLewy.onclick  = dajPrevPicture;
 }
 
 function odegrajPlik(plik, delay) {
