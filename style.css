@@ -42,7 +42,7 @@ div#pctArea {
     /*cover - ladny kwadrat, ale przycina...*/
     /* obrazek - koniec */
     transition: .2s;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 div#btnsArea {
@@ -94,10 +94,9 @@ div#bLewy, div#bPrawy {
     display: inline-block;
     width: 18%;
     height: 75%;
-    top: 1.8%;
+    top: 3%;
     /* background-color: red; */
     border: 2px solid black;
-    ;
 }
 
 div#bLewy {
@@ -110,7 +109,7 @@ div#bPrawy {
 
 div#bLewy p, div#bPrawy p {
     position: relative;
-    top: 35%;
+    top: 32%;
     text-align: center;
     font-size: 2.5em;
     /* background-color: green; */
