@@ -123,9 +123,7 @@ div#bLewy p, div#bPrawy p {
         --pctAreaSide-ski: calc(0.8 * var(--content-width-ski));
     }
     
-    #content {
-        margin-top: 1%;
-    }
+    
     div#btnsArea {
         height: calc(2.0*var(--btnsArea-height-ski));
     }
