@@ -9,8 +9,9 @@
     --content-height-ski: 95vh;
     /* bok kwadratu na obrazek: */
     --pctAreaSide-ski: calc(0.5 * var(--content-width-ski));
-    /* --btnsArea-height-ski: calc(0.1 * var(--content-height-ski)); */
-    --btnsArea-height-ski: calc(0.25*var(--pctAreaSide-ski));
+
+    --btnsArea-height-ski: calc(0.15 * var(--content-height-ski));
+    /* --btnsArea-height-ski: calc(0.25*var(--pctAreaSide-ski)); */
 }
 
 body {
@@ -41,7 +42,7 @@ div#pctArea {
     /*cover - ladny kwadrat, ale przycina...*/
     /* obrazek - koniec */
     transition: .2s;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 div#btnsArea {
@@ -52,6 +53,7 @@ div#btnsArea {
     text-align: center;
     width: var(--content-width-ski);
     height: var(--btnsArea-height-ski);
+
     /* background-color: green; */
     /* border: 1px dotted black; */
 }
@@ -126,7 +128,7 @@ div#bLewy p, div#bPrawy p {
         margin-top: 1%;
     }
     div#btnsArea {
-        height: calc(2.5*var(--btnsArea-height-ski));
+        height: calc(2.0*var(--btnsArea-height-ski));
     }
     div#btnsArea p {
         font-size: 200%;
